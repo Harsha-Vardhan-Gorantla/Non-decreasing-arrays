@@ -1,0 +1,20 @@
+#include <stdio.h>
+main(){
+     int T,num;
+    scanf("%d",&T);
+    for(int i=0;i<T;i++){
+        int long N;
+        scanf("%ld",&N);
+        int long A[N],B[N];
+        for(int j=0;j<N;j++){
+            scanf("%ld",&A[j]);
+        }
+        B[0] = A[0];
+        printf("%ld ",B[0]);
+       for(int k=1;k<N;k++){
+             A[k]=A[k]*((A[k-1]+A[k]-1)/A[k]);
+             printf("%ld ",A[k]);
+        }
+printf("\n");
+    }
+}
